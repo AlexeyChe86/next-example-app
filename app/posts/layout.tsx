@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { use } from 'react'
 
 async function getPosts() {
-  let posts = await fetch('https://dummyjson.com/posts?limit=5')
+  let posts = await fetch(`${process.env.API_BASE_URL}/posts?limit=5`)
   return posts.json()
 }
 

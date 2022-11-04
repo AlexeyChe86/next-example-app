@@ -1,7 +1,7 @@
 import { use } from 'react'
 
 async function getPost(id) {
-  const post = await fetch(`https://dummyjson.com/posts/${id}`)
+  const post = await fetch(`${process.env.API_BASE_URL}/posts/${id}`)
   return post.json()
 }
 
